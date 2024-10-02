@@ -30,3 +30,14 @@
 *.exe
 *.out
 *.app
+
+# Own
+
+*.vcx*
+*.cmake
+CMakeCache.txt
+CMakeFiles/
+*.sln
+*.exe
+build/
+.vs*
