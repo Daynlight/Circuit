@@ -9,6 +9,9 @@ file(GLOB_RECURSE h_files
 file(GLOB_RECURSE libs
   "vendor/**.lib")
 
+file(GLOB_RECURSE dlls
+  "vendor/**.dll")
+
 project(Circuit VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 
@@ -16,7 +19,12 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(Circuit ${cpp_files} ${h_files})
 
 include_directories("include/")
-include_directories("vendor/")
+include_directories("vendor/SDL2/")
 target_link_libraries(Circuit ${libs})
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Circuit)
+
+add_custom_command(TARGET Circuit POST_BUILD      
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        "${dlls}"
+        $<TARGET_FILE_DIR:Circuit>)              

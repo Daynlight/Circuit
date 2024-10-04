@@ -1,6 +1,8 @@
-#include "SDL2/SDL.h"
+#include "App.h"
 
-int main(){
-  
-  return 0;
-}
+int main(int argc, char* argv[]) {
+	App app;
+	app.Run();
+
+	return 0;
+};
