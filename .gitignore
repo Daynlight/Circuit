@@ -39,3 +39,6 @@ CMakeFiles/
 *.exe
 build/
 .vs*
+Circuit.dir/
+Debug/
+Reease/
