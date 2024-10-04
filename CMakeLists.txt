@@ -23,8 +23,3 @@ include_directories("vendor/SDL2/")
 target_link_libraries(Circuit ${libs})
 
 set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT Circuit)
-
-add_custom_command(TARGET Circuit POST_BUILD      
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${dlls}
-        $<TARGET_FILE_DIR:Circuit>)              
