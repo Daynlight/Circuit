@@ -1,6 +1,6 @@
-#include <iostream>
+#include "../include/SDL2/SDL.h"
 
 int main(){
-  std::cout << "Hell";
+  
   return 0;
 }
