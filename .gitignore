@@ -40,4 +40,4 @@ build/
 .vs*
 Circuit.dir/
 Debug/
-Reease/
+Release/
