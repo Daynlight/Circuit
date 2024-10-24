@@ -9,9 +9,6 @@ file(GLOB_RECURSE headers
 file(GLOB_RECURSE vendor_libs
   "../vendor/**.lib")
 
-file(GLOB_RECURSE vendor_dlls
-  "../vendor/**.dll")
-
 file(GLOB_RECURSE vendor_headers 
   "../vendor/**.h")
 
@@ -24,4 +21,5 @@ add_library(Circuit-Core SHARED ${src} ${headers})
 
 include_directories("../vendor/")
 include_directories("include/")
+
 target_link_libraries(Circuit-Core ${vendor_libs})
