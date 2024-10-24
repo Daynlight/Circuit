@@ -7,7 +7,7 @@ file(GLOB_RECURSE headers
   "include/**.h")
 
 file(GLOB_RECURSE vendor_libs
-  "../vendor/**.lib")
+  "../vendor/lib/**.lib")
 
 file(GLOB_RECURSE vendor_headers 
   "../vendor/**.h")

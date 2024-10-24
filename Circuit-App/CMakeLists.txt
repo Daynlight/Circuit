@@ -7,7 +7,7 @@ file(GLOB_RECURSE headers
   "include/**.h")
 
 file(GLOB_RECURSE vendor_libs
-  "../vendor/**.lib")
+  "../vendor/lib/**.lib")
 
 file(GLOB_RECURSE vendor_headers 
   "../vendor/**.h")
@@ -26,5 +26,5 @@ target_link_libraries(Circuit-App ${vendor_libs})
 
 add_custom_command(TARGET Circuit-App POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "../dlls"
+        "../vendor/dlls"
         ${CMAKE_LIBRARY_OUTPUT_DIRECTORY}$<CONFIG>/)    
