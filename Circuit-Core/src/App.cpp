@@ -18,6 +18,7 @@ void App::Run() {
 
 		SDL_RenderClear(renderer);
 
+		
 		SDL_PollEvent(app_event);
 	};
 };
